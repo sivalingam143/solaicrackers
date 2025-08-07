@@ -26,12 +26,9 @@ const Footer = () => {
         </div>
       )}
       <div className="fixed point">
-        <WhatsAppButton
-          name="Hi Mayil Vel Crackers"
-          phoneNumber="+91 7094665313"
-        />
+        <WhatsAppButton name="Hi Solai Crackers" phoneNumber="+91 6380258837" />
       </div>
-      <a href="https://maps.app.goo.gl/TZijmYn74uZK3VBn8">
+      <a href="https://maps.app.goo.gl/y97T2WyQ1JBVR5Hg8">
         <div className="fixed point3" style={{ cursor: "pointer" }}>
           <img
             src={require("../../assets/images/googlelocation.png")}
@@ -40,7 +37,7 @@ const Footer = () => {
           />
         </div>
       </a>
-      <a href="tel:+91 7094665313">
+      <a href="tel:+91 9842131905">
         <div className="fixed point4" style={{ cursor: "pointer" }}>
           <img
             src={require("../../assets/images/callicon.webp")}
@@ -98,7 +95,10 @@ const Footer = () => {
                     Address:
                     <br />
                   </span>
-                  <span>15/235/16, Sattur Rd, indhira colony, mayiladuthurai, Sivakasi, Tamil Nadu 626189</span>
+                  <span>
+                    2/409/ EA3,road,Mettamali, Kumaralingapuram, Sattur, Tamil
+                    Nadu 626203
+                  </span>
                 </div>
                 <div>
                   <span className="span">
@@ -106,11 +106,9 @@ const Footer = () => {
                     <br />
                   </span>
                   <span>
-                    70946 65313
+                    63802 58837
                     <br />
-                    89406 55143
-                    <br />
-                    86681 68416
+                    98421 31905
                   </span>
                 </div>
                 <div>
@@ -118,12 +116,10 @@ const Footer = () => {
                     Whatsapp:
                     <br />
                   </span>
-                 <span>
-                    70946 65313
+                  <span>
+                    63802 58837
                     <br />
-                    89406 55143
-                    <br />
-                    86681 68416
+                    98421 31905
                   </span>
                 </div>
                 <div>
@@ -131,7 +127,7 @@ const Footer = () => {
                     Email:
                     <br />
                   </span>
-                  <span>mayilvelcrackers@gmail.com</span>
+                  <span>solaicrackers@gmail.com</span>
                 </div>
               </Col>
 
@@ -179,7 +175,7 @@ const Footer = () => {
                 <Col lg="12" className="py-3">
                   <div className="text-center regular blue">
                     {" "}
-                    Copyright © 2024, Mayil Vel Crackers. All rights reserved{" "}
+                    Copyright © 2025, Solai Crackers. All rights reserved{" "}
                   </div>
                 </Col>
               </Row>

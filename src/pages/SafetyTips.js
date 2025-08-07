@@ -9,12 +9,12 @@ const SafetyTipsOne = () => {
   return (
     <div>
       <MetaTags
-        title="Safety Tips - Mayil Vel Crackers - Whole sale Crackers"
+        title="Safety Tips -Solai Crackers - Whole sale Crackers"
         type="website"
-        siteName="Mayil Vel Crackers.com"
+        siteName="solaiCrackers.com"
         url="https://srisenthurmuruganfireworks.zentexus.com/safetytips"
-        keywords="Safety Tips | Mayil Vel Crackers | Fireworks Safety"
-        description="Learn essential safety tips for handling fireworks Mayil Vel Crackers."
+        keywords="Safety Tips |Solai Crackers | Fireworks Safety"
+        description="Learn essential safety tips for handling fireworksSolai Crackers."
         revisitAfter="10 Days"
       />
       <AppBarThree />
@@ -30,7 +30,7 @@ const SafetyTipsOne = () => {
               <h1 className="text-center bold">Safety Tips</h1>
             </Col>
             <Col lg="12" className="py-3">
-              <h1 className="text-center bold">Mayil Vel Crackers</h1>
+              <h1 className="text-center bold">Solai Crackers</h1>
             </Col>
 
             <Col lg="12" className="py-3">
@@ -194,12 +194,12 @@ const SafetyTipsTwo = () => {
   return (
     <>
       <MetaTags
-        title="Safety Tips - Mayil Vel Crackers - Whole sale Crackers"
+        title="Safety Tips -Solai Crackers - Whole sale Crackers"
         type="website"
-        siteName="Mayil Vel Crackers.com"
+        siteName="solaicrackers.com"
         url="https://srisenthurmuruganfireworks.zentexus.com/safetytips"
-        keywords="Safety Tips | Mayil Vel Crackers | Fireworks Safety"
-        description="Learn essential safety tips for handling fireworks Mayil Vel Crackers."
+        keywords="Safety Tips |Solai Crackers | Fireworks Safety"
+        description="Learn essential safety tips for handling fireworksSolai Crackers."
         revisitAfter="10 Days"
       />
       <AppBarThree />

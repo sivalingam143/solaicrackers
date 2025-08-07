@@ -36,21 +36,20 @@ const About = () => {
             <Row>
               <Col lg="6" className="py-3 align-self-center">
                 <h3 className="bold">About Us</h3>
-                <h4 className="bold"> Mayil Vel Crackers</h4>
+                <h4 className="bold">Solai Crackers</h4>
                 <div className="regular">
                   <p>
-                    Welcome to Mayil Vel Crackers, your one-stop
-                    destination for high-quality crackers available both in
-                    retail and wholesale! As one of the leading cracker stores
-                    in the region, we offer an extensive variety of fireworks
-                    ranging from sparklers, rockets, flowerpots, and more,
-                    ensuring celebrations filled with joy, color, and
-                    excitement.
+                    Welcome to Solai Crackers, your one-stop destination for
+                    high-quality crackers available both in retail and
+                    wholesale! As one of the leading cracker stores in the
+                    region, we offer an extensive variety of fireworks ranging
+                    from sparklers, rockets, flowerpots, and more, ensuring
+                    celebrations filled with joy, color, and excitement.
                   </p>
 
                   <p>
-                    Our shop crackers to all types of events, from festivals like
-                    Diwali and New Year to weddings, birthdays, and special
+                    Our shop crackers to all types of events, from festivals
+                    like Diwali and New Year to weddings, birthdays, and special
                     occasions. We proudly maintain the highest safety standards,
                     ensuring that our products are not only vibrant but also
                     reliable and safe for use.

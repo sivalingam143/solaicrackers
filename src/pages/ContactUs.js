@@ -35,9 +35,8 @@ const ContactUs = () => {
                 <PiMapPinSimpleAreaBold size={40} color={"#000"} />
               </div>
               <div className="regular">
-                Solai Crackers,
-                <br />
-                Sivakasi
+                2/409/ EA3,road,Mettamali, Kumaralingapuram, Sattur, Tamil Nadu
+                626203
               </div>
             </div>
           </Col>

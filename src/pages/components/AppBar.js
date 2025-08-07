@@ -390,7 +390,7 @@ const AppBarThree = () => {
                         onClick={() => handleShow("gpay")}
                       />
 
-                      <img
+                      {/* <img
                         src={require("../../assets/images/Phonepay.png")}
                         alt="PhonePe"
                         style={{
@@ -399,7 +399,7 @@ const AppBarThree = () => {
                           borderRadius: "50px",
                         }}
                         onClick={() => handleShow("phonepe")}
-                      />
+                      /> */}
                     </div>
                     <>
                       <Modal show={showModal} onHide={handleClose} centered>

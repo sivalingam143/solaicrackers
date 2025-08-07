@@ -148,7 +148,7 @@ const Footer = () => {
                 </div>
               </Col>
 
-              <Col
+              {/* <Col
                 className="co4 align-self-center d-sm-block "
                 lg={3}
                 md={12}
@@ -163,7 +163,7 @@ const Footer = () => {
                     style={{ maxWidth: "200px", maxHeight: "200px" }}
                   />
                 </div>
-              </Col>
+              </Col> */}
             </Row>
           </Container>
         </div>

@@ -428,8 +428,7 @@ const AppBarThree = () => {
                       </Modal>
                     </>
                     <div className="text-black d-lg-block d-none ">
-                      <h5 className="bold mt-2 mx-2">7094665313,8940655143,8668168416</h5>
-                          
+                      <h5 className="bold mt-2 mx-2">6380258837,9842131905</h5>
                     </div>
                   </div>
                 </Col>
@@ -440,7 +439,8 @@ const AppBarThree = () => {
                     speed={50}
                     delay={9}
                   >
-                  🎉 80% discount all type of crakers availble in retail and wholesale( 7094665313,8940655143,8668168416)
+                    🎉 80% discount all type of crakers availble in retail and
+                    wholesale( 6380258837,9842131905)
                   </Marquee>
                 </Col>
               </Row>
@@ -464,16 +464,17 @@ const AppBarThree = () => {
                 alignItems: "center",
               }}
             >
-               <Col lg="8" className="align-self-center text-black">
-                  <Marquee
-                    pauseOnHover={true}
-                    direction="left"
-                    speed={50}
-                    delay={9}
-                  >
-                  🎉 80% discount all type of crakers availble in retail and wholesale( 7094665313,8940655143,8668168416)
-                  </Marquee>
-                </Col>
+              <Col lg="8" className="align-self-center text-black">
+                <Marquee
+                  pauseOnHover={true}
+                  direction="left"
+                  speed={50}
+                  delay={9}
+                >
+                  🎉 80% discount all type of crakers availble in retail and
+                  wholesale( 6380258837,9842131905)
+                </Marquee>
+              </Col>
               {/*<a href="https://wa.me/918940655143?text=Hello Sri Senthur Murugan fireworks">
                     <div className="mob-icon mx-auto">
                       <img
@@ -617,7 +618,7 @@ const AppBarThree = () => {
                   <Navbar.Brand href="/">
                     <div className="logo company-name-head  mt-3">
                       <h2 className="logo-head-ft">
-                        MAYIL VEL CRACKERS
+                        SOLAI CRACKERS
                         <br />
                       </h2>
                       <hr className="logo-head-ul" />

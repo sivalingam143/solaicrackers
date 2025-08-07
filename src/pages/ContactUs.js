@@ -47,8 +47,9 @@ const ContactUs = () => {
                 <BiPhoneCall size={40} color={"#000"} />
               </div>
               <div>
-                <li>+91 8940655143</li>
                 <li>+91 7094665313</li>
+                <li>+91 8940655143</li>
+                <li>+91 8668168416</li>
               </div>
             </div>
           </Col>

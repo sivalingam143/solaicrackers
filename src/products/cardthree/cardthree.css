@@ -171,6 +171,7 @@ th {
   .product-name {
     font-size: 12px;
   }
+ 
   .hide-small {
     display: none;
   }
@@ -223,5 +224,24 @@ th {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 77;
+  z-index: 1200;
+}
+/* Mobile view styles */
+@media (max-width: 991.98px) {
+  .total-bg1 {
+    color: #feba17 !important; /* light yellow */
+   
+  }
+
+ .cart-icon1,
+.close-icon1 {
+  font-size: 40px;
+  cursor: pointer;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation: blink 1s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: infinite;
+  color: #feba17;
+}
 }

@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="fixed point">
         <WhatsAppButton
           name="Hi Mayil Vel Crackers"
-          phoneNumber="+91 8940655143"
+          phoneNumber="+91 7094665313"
         />
       </div>
       <a href="https://maps.app.goo.gl/TZijmYn74uZK3VBn8">
@@ -40,7 +40,7 @@ const Footer = () => {
           />
         </div>
       </a>
-      <a href="tel:+91 8940655143">
+      <a href="tel:+91 7094665313">
         <div className="fixed point4" style={{ cursor: "pointer" }}>
           <img
             src={require("../../assets/images/callicon.webp")}
@@ -106,9 +106,11 @@ const Footer = () => {
                     <br />
                   </span>
                   <span>
+                    70946 65313
+                    <br />
                     89406 55143
                     <br />
-                    70946 65313
+                    86681 68416
                   </span>
                 </div>
                 <div>
@@ -116,10 +118,12 @@ const Footer = () => {
                     Whatsapp:
                     <br />
                   </span>
-                  <span>
+                 <span>
+                    70946 65313
+                    <br />
                     89406 55143
                     <br />
-                    7094665313
+                    86681 68416
                   </span>
                 </div>
                 <div>

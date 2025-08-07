@@ -195,7 +195,7 @@ const ProductCardTwo = ({
   return (
     <div>
       <>
-        <Container fluid className="stick-top">
+        {/* <Container fluid className="stick-top">
           <Row>
             <Col lg="12" className="p-0">
               <StyledTable>
@@ -222,7 +222,7 @@ const ProductCardTwo = ({
               </StyledTable>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </>
 
       {category.map((categoryItem) => (
@@ -249,7 +249,7 @@ const ProductCardTwo = ({
           <Container fluid>
             <Row>
               {products
-                .filter((product) => product.category_id === categoryItem.id)
+                .filter((product) => product.category_id === categoryItem.id && product.active === 1)
                 .map((product) => (
                   <Col lg="4" md="6" className="paxpad" key={product.id}>
                     <div className="d-flex justify-content-center product-card w-100">
@@ -507,13 +507,13 @@ const ProductCardTwo = ({
               </tbody>
             </table>
           </Modal.Body>
-          <Modal.Footer className="mx-auto">
+          <Modal.Footer className="footer">
             <table>
               <tbody>
                 <tr>
                   {selectedProduct && selectedProduct.img && (
                     <td>
-                      <div className="dual">
+                      <div className="dual mx-auto">
                         <img
                           src={selectedProduct.img}
                           className="img-fluid"
@@ -524,7 +524,7 @@ const ProductCardTwo = ({
                   )}
                   {selectedProduct && selectedProduct.video_url && (
                     <td>
-                      <div className="w-25 mx-auto">
+                      <div className="w-100 mx-auto">
                         <div
                           className="play-icon"
                           onClick={handleVideoModalShow}

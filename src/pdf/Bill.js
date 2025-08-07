@@ -232,8 +232,8 @@ const Bill = ({ data }) => {
                 <Text style={styles.large}>{companyData.company_name}</Text>
                 <Text>{companyData.address}</Text>
                 <Text>
-                  Phone : {companyData.phone} , {companyData.mobile} ,
-                  9943833618
+                  Phone : {companyData.phone} , {companyData.mobile} 
+                  
                 </Text>
                 {/* <Text>GST : {companyData.gst_no}</Text> */}
               </View>

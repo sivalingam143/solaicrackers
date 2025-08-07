@@ -24,6 +24,9 @@ import { Forms, DropDowns } from "../../components/Forms";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import API_DOMAIN from "../../config/config";
 import Bill from "../../pdf/Bill";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const CardThree = ({
   products,
@@ -132,52 +135,54 @@ const CardThree = ({
       : products.filter((product) => product.category_id === selectedCategory);
 
   const handleSubmit = () => {
-    fetch(`${API_DOMAIN}/online_enq_web.php`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        cart_pro: cart,
-        customer_data: formData,
-        total_products: totals.totalProducts,
-        total_price: totals.discountRate.toFixed(2),
-        total_discount: totals.overallTotal.toFixed(2),
-      }),
+  const requiredFields = ['name', 'email', 'mobile', 'address', 'state', 'city'];
+
+ for (const field of requiredFields) {
+    if (!formData[field] || formData[field].trim() === "") {
+      toast.error(`Please enter a valid ${field}`, { theme: "colored" });
+      return;
+    }
+  }
+
+  fetch(`${API_DOMAIN}/online_enq_web.php`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      cart_pro: cart,
+      customer_data: formData,
+      total_products: totals.totalProducts,
+      total_price: totals.discountRate.toFixed(2),
+      total_discount: totals.overallTotal.toFixed(2),
+    }),
+  })
+    .then((response) => {
+      console.log("Response Status:", response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
     })
-      .then((response) => {
-        console.log("Response Status:", response.status);
-        console.log(
-          "postdata",
-          JSON.stringify({
-            cart_pro: cart,
-            customer_data: formData,
-            total_products: totals.totalProducts,
-            total_price: totals.discountRate.toFixed(2),
-            total_discount: totals.overallTotal.toFixed(2),
-          })
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Response Data:", data);
-        if (data.head.code === 200) {
-          setPrintData(data.body.data);
-          showModal();
-          setCart([]);
-          setFormData([]);
-          closeOut();
-        } else {
-          console.error(data.body.msg);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
-  };
+    .then((data) => {
+      console.log("Response Data:", data);
+      if (data.head.code === 200) {
+        setPrintData(data.body.data);
+        showModal();
+        setCart([]);
+        setFormData([]);
+        closeOut();
+      } else {
+        window.alert(`Submission failed: ${data.body.msg}`);
+        console.error(data.body.msg);
+      }
+    })
+    .catch((error) => {
+      window.alert("An error occurred during submission. Please try again.");
+      console.error("Error fetching products:", error);
+    });
+};
+
 
   const extractVideoId = (url) => {
     const urlObj = new URL(url);
@@ -219,23 +224,23 @@ const CardThree = ({
               onChange={handleCategoryChange}
             />
           </Col>
-          <Col lg="12" className="p-0">
+          <Col lg="12" className="p-3">
             <StyledTable>
               <thead>
                 <tr>
-                  <th>Total Products : {totals.totalProducts}</th>
-                  <th>
+                  <th className="total-bg1">Total Products : {totals.totalProducts}</th>
+                  <th className="total-bg1">
                     MRP Rate Total :{" "}
                     {Math.round(totals.overallTotal.toFixed(2))}
                   </th>
-                  <th>
+                  <th className="total-bg1">
                     Discount with Total (
                     {category.length > 0 ? category[0].discount : "N/A"}%) :
                     {Math.round(totals.discountRate * 100) / 100}
                   </th>
 
-                  <th>
-                    <div className="cart-icon" onClick={handleShowCart}>
+                  <th className="total-bg1">
+                    <div className="cart-icon1" onClick={handleShowCart}>
                       <FaShoppingCart />
                     </div>
                   </th>
@@ -270,7 +275,7 @@ const CardThree = ({
                         alt={cat.category_name}
                         className="category-image img-fluid"
                       />
-                      <div className="category-name">{cat.category_name}</div>
+                      <div className="category-name bold">{cat.category_name}</div>
                     </div>
                   ))}
                 </div>
@@ -292,22 +297,22 @@ const CardThree = ({
                 onChange={handleCategoryChange}
               />
             </Col>
-            <Col lg="2" className="text-center py-3 pad-lef">
-              <div className="total-bg">
+            <Col lg="2" className="text-center py-3">
+              <div className="total-bg bold">
                 <p>Total Products: {totals.totalProducts}</p>
               </div>
             </Col>
-            <Col lg="2" className="text-center py-3 pad-lef">
-              <div className="total-bg">
+            <Col lg="2" className="text-center py-3">
+              <div className="total-bg bold">
                 <p>MRP Total: {totals.overallTotal.toFixed(2)}</p>
               </div>
             </Col>
-            <Col lg="2" className="text-center py-3 pad-lef">
-              <div className="total-bg">
+            <Col lg="2" className="text-center py-3">
+              <div className="total-bg bold">
                 <p>Discount Price Total: {totals.discountRate.toFixed(2)}</p>
               </div>
             </Col>
-            <Col lg="1" className="text-center py-3 pad-lef">
+            <Col lg="1" className="text-center py-3">
               <div className="cart-icon" onClick={handleShowCart}>
                 <FaShoppingCart />
               </div>
@@ -324,7 +329,7 @@ const CardThree = ({
                     <div className="w-100">
                       <table className="table table-bordered">
                         <thead>
-                          <tr className="table-head">
+                          <tr className="table-head bold">
                             <th>#</th>
                             <th>Name</th>
                             <th>Pack Content</th>
@@ -343,7 +348,14 @@ const CardThree = ({
                             return (
                               <>
                                 <tr key={cat.id} className="category-bg">
-                                  <th colSpan="7">{cat.category_name}</th>
+                                  <th colSpan="7">{cat.category_name} {cat.discount &&
+                            cat.discount > 0 ? (
+                              <span className="discount_percentage">
+                                ({cat.discount}% Discount)
+                              </span>
+                            ) : (
+                              ""
+                            )}</th>
                                 </tr>
                                 {categoryProducts.map((product, index) => (
                                   <tr key={product.id}>
@@ -354,7 +366,7 @@ const CardThree = ({
                                           {product.img ? (
                                             <img
                                               src={product.img}
-                                              alt={product.name}
+                                              alt={product.product_name}
                                               className="img-fluid"
                                               onClick={() =>
                                                 handleShow(product)
@@ -368,8 +380,8 @@ const CardThree = ({
                                             />
                                           )}
                                         </div>
-                                        <div className="px-3">
-                                          {product.name}
+                                        <div className="px-3 bold">
+                                          {product.product_name}
                                         </div>
                                       </div>
                                     </td>
@@ -408,7 +420,7 @@ const CardThree = ({
                                               updateQuantity(product.id, -1);
                                               addToCart({
                                                 id: product.id,
-                                                name: product.name,
+                                                name: product.product_name,
                                                 total_price: product.price,
                                                 qty: product.qty - 1,
                                                 discount: cat.discount,
@@ -438,7 +450,7 @@ const CardThree = ({
                                           onClick={() => {
                                             addToCart({
                                               id: product.id,
-                                              name: product.name,
+                                              name: product.product_name,
                                               total_price: product.price,
                                               qty: product.qty + 1,
                                               discount: cat.discount,
@@ -601,7 +613,7 @@ const CardThree = ({
                                     updateQuantity(product.id, -1);
                                     addToCart({
                                       id: product.id,
-                                      name: product.name,
+                                      name: product.product_name,
                                       total_price: Math.round(product.price),
                                       qty: product.qty - 1,
                                       discount: categoryItem.discount,
@@ -637,7 +649,7 @@ const CardThree = ({
                                 onClick={() => {
                                   addToCart({
                                     id: product.id,
-                                    name: product.name,
+                                    name: product.product_name,
                                     total_price: Math.round(product.price),
                                     qty: product.qty + 1,
                                     discount_lock: product.discount_lock,
@@ -740,7 +752,7 @@ const CardThree = ({
                               </div>
                               <div className="w-75">
                                 <div className="product-name regular">
-                                  {product.name}
+                                  {product.product_name}
                                 </div>
                                 <div className="text-center regular">
                                   <span className="product-content">
@@ -925,13 +937,13 @@ const CardThree = ({
               </tbody>
             </table>
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer className="footer">
             <table>
               <tbody>
                 <tr>
                   {selectedProduct && selectedProduct.img && (
                     <td>
-                      <div className="dual">
+                      <div className="dual mx-auto">
                         <img
                           src={selectedProduct.img}
                           className="img-fluid"
@@ -1223,6 +1235,7 @@ const CardThree = ({
             </div>
           </Offcanvas.Body>
         </Offcanvas>
+          <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
       </>
       {/* customer details end */}
       {/* order preview modal start*/}

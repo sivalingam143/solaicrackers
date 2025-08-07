@@ -428,7 +428,7 @@ const AppBarThree = () => {
                       </Modal>
                     </>
                     <div className="text-black d-lg-block d-none ">
-                      <h5 className="bold mt-2 mx-2">7094665313,8940655143</h5>
+                      <h5 className="bold mt-2 mx-2">7094665313,8940655143,8668168416</h5>
                           
                     </div>
                   </div>
@@ -440,10 +440,7 @@ const AppBarThree = () => {
                     speed={50}
                     delay={9}
                   >
-                  🎉 60% தள்ளுபடி – இப்பவே புக் பண்ணுங்க!
- 🧨 எல்லா வகை பட்டாசுகளும் குறைந்த விலையில்!
- 💥 கல்யாணம், விழா, பிறந்த நாள் க்கு  நம்ம மயில் வேல்  கிராக்கர்ஸ்!
- 🏭 சிவகாசி  பட்டாசு தொழில் சாலை  நேரடி விற்பனை( 7094665313,8940655143)
+                  🎉 80% discount all type of crakers availble in retail and wholesale( 7094665313,8940655143,8668168416)
                   </Marquee>
                 </Col>
               </Row>
@@ -467,6 +464,16 @@ const AppBarThree = () => {
                 alignItems: "center",
               }}
             >
+               <Col lg="8" className="align-self-center text-black">
+                  <Marquee
+                    pauseOnHover={true}
+                    direction="left"
+                    speed={50}
+                    delay={9}
+                  >
+                  🎉 80% discount all type of crakers availble in retail and wholesale( 7094665313,8940655143,8668168416)
+                  </Marquee>
+                </Col>
               {/*<a href="https://wa.me/918940655143?text=Hello Sri Senthur Murugan fireworks">
                     <div className="mob-icon mx-auto">
                       <img
@@ -477,7 +484,7 @@ const AppBarThree = () => {
                     </div>
                   </a>*/}
 
-              <div className="d-flex align-items-center">
+              {/* <div className="d-flex align-items-center">
                 <div>
                   <Row style={{ width: "100vw" }}>
                     <Col
@@ -511,8 +518,9 @@ const AppBarThree = () => {
                           color: "black",
                         }}
                       >
-                        8940655143
                         7094665313
+                        8940655143
+                        8668168416
                   
                       </div>
                     </Col>
@@ -563,7 +571,7 @@ const AppBarThree = () => {
                     </Modal.Footer>
                   </Modal>
                 </>
-              </div>
+              </div> */}
 
               {/*<Col xs="4" sm="4">
                   <a href="tel:+918940655143">

@@ -374,6 +374,7 @@ const Bill = ({ data }) => {
                   <Text style={styles.large}>Payments Details</Text>
                   <Text>Bank name : {companyData.bank_name}</Text>
                   <Text>Acc Holder Name : {companyData.acc_holder_name}</Text>
+                  <Text>Acc Number : {companyData.acc_number}</Text>
                   <Text>IFSC Code: {companyData.ifsc_code}</Text>
                   <Text>GPAY Number : {companyData.mobile}</Text>
                 </View>

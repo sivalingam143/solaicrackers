@@ -340,9 +340,9 @@ const CardThree = ({
                           </tr>
                         </thead>
                         <tbody>
-                          {category.map((cat) => {
+                          {category.filter((cat) => cat.website_active === 1).map((cat) => {
                             const categoryProducts = filteredProducts.filter(
-                              (product) => product.category_id === cat.id
+                              (product) => product.category_id === cat.id && product.active === 1 
                             );
                             if (categoryProducts.length === 0) return null;
                             return (
@@ -386,7 +386,7 @@ const CardThree = ({
                                       </div>
                                     </td>
                                     <td className="hide-small">
-                                      <div className="product-content">
+                                      <div className="product-content bold">
                                         {product.product_content}
                                       </div>
                                     </td>
@@ -506,9 +506,9 @@ const CardThree = ({
       {/* Mobile View */}
       <div className="d-block d-lg-none">
         {selectedCategory === "all"
-          ? category.map((categoryItem) => {
+          ? category.filter((cat) => cat.website_active === 1).map((categoryItem) => {
               const categoryProducts = filteredProducts.filter(
-                (product) => product.category_id === categoryItem.id
+                (product) => product.category_id === categoryItem.id && product.active === 1
               );
               if (categoryProducts.length === 0) return null;
               return (
@@ -554,11 +554,11 @@ const CardThree = ({
                               </div>
                             </div>
                             <div className="w-75">
-                              <div className="product-name regular">
+                              <div className="product-name bold">
                                 {product.name}
                               </div>
                               <div className="text-center regular">
-                                <span className="product-content">
+                                <span className="product-content bold">
                                   {product.product_content}
                                 </span>
                               </div>
@@ -698,9 +698,10 @@ const CardThree = ({
             })
           : category
               .filter((cat) => cat.id === selectedCategory)
+              .filter((cat) => cat.website_active === 1)
               .map((categoryItem) => {
                 const categoryProducts = filteredProducts.filter(
-                  (product) => product.category_id === categoryItem.id
+                  (product) => product.category_id === categoryItem.id && product.active === 1
                 );
                 if (categoryProducts.length === 0) return null;
                 return (
@@ -751,11 +752,11 @@ const CardThree = ({
                                 </div>
                               </div>
                               <div className="w-75">
-                                <div className="product-name regular">
+                                <div className="product-name bold">
                                   {product.product_name}
                                 </div>
                                 <div className="text-center regular">
-                                  <span className="product-content">
+                                  <span className="product-content bold">
                                     {product.product_content}
                                   </span>
                                 </div>
@@ -813,7 +814,7 @@ const CardThree = ({
                                       updateQuantity(product.id, -1);
                                       addToCart({
                                         id: product.id,
-                                        name: product.name,
+                                        name: product.product_name,
                                         total_price: Math.round(product.price),
                                         qty: product.qty - 1,
                                         discount: categoryItem.discount,
@@ -851,7 +852,7 @@ const CardThree = ({
                                   onClick={() => {
                                     addToCart({
                                       id: product.id,
-                                      name: product.name,
+                                      name: product.product_name,
                                       total_price: Math.round(product.price),
                                       qty: product.qty + 1,
                                       discount_lock: product.discount_lock,
@@ -1073,7 +1074,7 @@ const CardThree = ({
                       <td className="w-100"> Overall Total :</td>
                       <td>
                         {" "}
-                        ₹<span>{totals.discountRate.toFixed(2)}</span>
+                        ₹<span className="bold">{totals.discountRate.toFixed(2)}</span>
                       </td>
                     </tr>
                   </td>
@@ -1207,7 +1208,7 @@ const CardThree = ({
                         <td className="w-100"> Overall Total :</td>
                         <td>
                           {" "}
-                          ₹<span>{totals.discountRate.toFixed(2)}</span>
+                          ₹<span className="bold">{totals.discountRate.toFixed(2)}</span>
                         </td>
                       </tr>
                     </td>

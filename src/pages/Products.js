@@ -42,8 +42,8 @@ const Products = () => {
       <MetaTags
         title="Crackers Price List | Solai Crackers | Best Crackers Shops"
         type="website"
-        siteName="srisenthurmuruganfireworks.com"
-        url="https://srisenthurmuruganfireworks.zentexus.com/products"
+        siteName="solaicrackers.com"
+        url="https://solaicrackers.com.com/products"
         keywords="Wholesale Crackers | Solai Crackers | Retails Crackers | Including sparklers, rockets, and more | Celebrate Diwali with affordable and exciting crackers"
         description="Find the best deals on a wide variety of fireworks"
         revisitAfter="10 Days"

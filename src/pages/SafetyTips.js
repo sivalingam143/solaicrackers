@@ -11,8 +11,8 @@ const SafetyTipsOne = () => {
       <MetaTags
         title="Safety Tips -Solai Crackers - Whole sale Crackers"
         type="website"
-        siteName="solaiCrackers.com"
-        url="https://srisenthurmuruganfireworks.zentexus.com/safetytips"
+        siteName="solaicrackers.com"
+        url="https://solaicrackers.com/safetytips"
         keywords="Safety Tips |Solai Crackers | Fireworks Safety"
         description="Learn essential safety tips for handling fireworksSolai Crackers."
         revisitAfter="10 Days"

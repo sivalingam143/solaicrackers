@@ -12,8 +12,8 @@ const ContactUs = () => {
       <MetaTags
         title="Contact Us - Solai crackers - Whole sale Crackers"
         type="website"
-        siteName="mayilvelcrackers.com"
-        url="https://mayilvelcrackers.com/contactus"
+        siteName="solaicrackers.com"
+        url="https://solaicrackers.com/contactus"
         keywords="Contact Us | Solai Crackers  "
         description="Contact for wholesale Crackers and Retail Crackers"
         revisitAfter="10 Days"

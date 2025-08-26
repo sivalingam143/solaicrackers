@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="fixed point">
         <WhatsAppButton name="Hi Solai Crackers" phoneNumber="+91 6380258837" />
       </div>
-      <a href="https://maps.app.goo.gl/y97T2WyQ1JBVR5Hg8">
+      <a href="https://share.google/ij5I9EZMlczyginKS">
         <div className="fixed point3" style={{ cursor: "pointer" }}>
           <img
             src={require("../../assets/images/googlelocation.png")}

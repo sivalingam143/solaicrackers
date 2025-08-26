@@ -65,8 +65,7 @@ const ContactUs = () => {
           <Col lg="12" md="12" xs="12" className="py-5">
             <>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.4627551715266!2d77.89733609999999!3d9.401735399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06cb75ede13b7b%3A0x9d9c498646dcd81e!2sSolai%20Crackers%20shop!5e1!3m2!1sen!2sin!4v1754566077086!5m2!1sen!2sin"
-                width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d13525.016756638213!2d77.89554986238518!3d9.407633070462547!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1756188533163!5m2!1sen!2sin"
                 height="600"
                 style={{ border: 0 }}
                 allowFullScreen

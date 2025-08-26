@@ -339,7 +339,7 @@ const CardThree = ({
                             <th>Total Price</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="tablebody">
                           {category.filter((cat) => cat.website_active === 1).map((cat) => {
                             const categoryProducts = filteredProducts.filter(
                               (product) => product.category_id === cat.id && product.active === 1 
@@ -358,7 +358,7 @@ const CardThree = ({
                             )}</th>
                                 </tr>
                                 {categoryProducts.map((product, index) => (
-                                  <tr key={product.id}>
+                                  <tr key={product.id} className="tabledata">
                                     <td>{index + 1}</td>
                                     <td className="wordbreak">
                                       <div className="d-flex align-items-center product-img-name py-0 px-0">
@@ -606,7 +606,7 @@ const CardThree = ({
                             </div>
                             <Calc className="py-3">
                               <Buttons
-                                className="mx-2"
+                                className="mx-2 button"
                                 label={<FaMinus />}
                                 onClick={() => {
                                   if (product.qty > 0) {
@@ -644,7 +644,7 @@ const CardThree = ({
                                 />
                               </div>
                               <Buttons
-                                className="mx-2"
+                                className="mx-2 buttons"
                                 label={<FaPlus />}
                                 onClick={() => {
                                   addToCart({

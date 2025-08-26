@@ -10,7 +10,11 @@ th {
   color: #fff !important;
   border: 1px solid #c4cadb;
 }
-
+td {
+  background-color: #f7d074 !important;
+  color: black !important;
+  font-weight: bolder;
+}
 .total-bg {
   background-color: #feba17;
   color: black;
@@ -26,11 +30,12 @@ th {
 .bg-grey-fixed {
   background-color: #071545;
 }
-
 .pad-lef {
   padding-left: 250px;
 }
-
+.buttons{
+  color: black !important;
+}
 .wordbreak {
   white-space: pre;
 }
@@ -47,7 +52,7 @@ th {
   margin: 0 auto !important;
   display: flex;
   padding: 10px;
-  border: 3px solid #feba17;
+  border: 3px solid #573e05;
   border-radius: 5px;
 }
 
@@ -71,6 +76,16 @@ th {
 
 .qty > input {
   width: 50% !important;
+}
+.jOdUWu {
+    background-color: #4e3803 !important;
+    font-size: 18px;
+    color: #fff;
+    font-family: bold;
+    padding: 5px 6px;
+    border: 0 !important;
+    border-radius: 10px;
+    width: auto;
 }
 
 .product-box {

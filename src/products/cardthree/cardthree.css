@@ -186,7 +186,9 @@ td {
   .product-name {
     font-size: 12px;
   }
- 
+ .paxpad  .product-card{
+   background-color: #feba17 !important;
+ }
   .hide-small {
     display: none;
   }
@@ -195,7 +197,7 @@ td {
     font-size: 12px;
     text-align: center;
   }
-
+  
   .product-content {
     font-size: 12px;
   }

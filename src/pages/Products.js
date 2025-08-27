@@ -48,7 +48,7 @@ const Products = () => {
         description="Find the best deals on a wide variety of fireworks"
         revisitAfter="10 Days"
       />
-      <div id="app-bar" className="overflow-hidden">
+      <div id="app-bar" className="w-100 overflow-hidden">
         <AppBarThree />
       </div>
       <Banner banner={banner} />

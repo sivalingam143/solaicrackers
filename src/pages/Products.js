@@ -51,8 +51,8 @@ const Products = () => {
       <div id="app-bar" className="w-100 overflow-hidden">
         <AppBarThree />
       </div>
-      <Banner banner={banner} />
-      <ProductController />
+      <Banner banner={banner} className='w-100' />
+      <ProductController  />
       <Footer />
     </>
   );

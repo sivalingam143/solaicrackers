@@ -549,3 +549,7 @@ a {
 .foot-pad .row .d-sm-block .span {
   color: gray;
 }
+.carousel {
+    position: relative;
+    display: none !important;
+}

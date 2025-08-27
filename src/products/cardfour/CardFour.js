@@ -186,7 +186,7 @@ const CardFour = ({
                   <input
                     type="text"
                     placeholder="Search..."
-                    className="form-control form-control-sm mt-1 searchbox t"
+                    className="mt-1 searchbox"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />

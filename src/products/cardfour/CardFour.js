@@ -182,15 +182,15 @@ const CardFour = ({
           <Col lg="12">
             <Row>
               <Col lg="12" className="px-0">
-              <div classaname="tablerow">
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      className="form-control form-control-sm mt-1 searchbox t"
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                    />
-                  </div>
+                <div classaname="tablerow">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    className="form-control form-control-sm mt-1 searchbox t"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
                 <div className="w-100 table-four-pricelist sticky-top">
                   <Table className="mb-0">
                     <thead>
@@ -214,8 +214,8 @@ const CardFour = ({
                     </thead>
                   </Table>
                 </div>
-                <div>
-                  <Table className="mb-0 fourth-table">
+                <div className="overflow-hidden">
+                  <Table responsive className="mb-0 fourth-table">
                     <thead>
                       <tr>
                         <th>Img</th>
